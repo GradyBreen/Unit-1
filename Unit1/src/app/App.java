@@ -10,7 +10,7 @@ public class App {
     String color = "red";
     boolean ben = false;
 
-    while (count < 10) {
+    while (count <= 10) {
         System.out.println("The count is " + count);   
         count = count + 1;  
     }
