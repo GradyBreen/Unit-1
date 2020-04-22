@@ -1,37 +1,35 @@
-package app; 
+package app;
 
 public class App {
-    public static void main(String[] args) throws Exception{
+    public static void main(final String[] args) throws Exception{
 
-        System.out.println("Start first loop");
-for (int i = 0; i < 20; i++){
-    if (i == 10){
+        System.out.println("Start first Loop");
+
+        for (int i = 20; i >0; i--){
+        if (i == 10){
         int x = 1;
-
         while (x <= 6){
-System.out.println(i);
- x++;
-       }
+        System.out.println(i);
+        x++;
+       } 
        
-    }else{
+        }else{
         System.out.println(i);
-    }    
+     }  
+    }  
+        System.out.println("End first loop");
+        System.out.println("Start second loop");
 
-
-}
-{
-}
-System.out.println("End First Loop");
-System.out.println("Start Second loop");
-
-for(int i = -1; i <20; i++){
-    if(i %3 == 0){
-    }else{ 
+        for(int i = 0; 36 >= i; i = i + 4){
+        if(i % 6 == 0){
         System.out.println(i);
-    }
+        System.out.println("Hey!");}
+        
+    else{
+      System.out.println(i);
+     }
+        }
+ }
 }
-System.out.println("End of second loop");
+        
 
-
-    }
-    }
