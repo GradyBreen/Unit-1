@@ -6,22 +6,20 @@ public class App {
     public static void main(final String[] args) throws Exception{
 
       Scanner input = new Scanner(System.in);
-
-    System.out.println("Please enter your first name.");
-    String firstName = input.nextLine();
-    System.out.println("Please enter your last name.");
-    String lastName = input.nextLine();
-    System.out.println("Please enter your age");
-    String age = input.nextLine();
-    System.out.println("Please enter your grade number");
-    String grade = input.nextLine();
-    System.out.println("Please enter your favorite color");
-    String color = input.nextLine();
-    System.out.println("Hello, " + firstName + " " + lastName + " you are " + age + " years old, in grade " + grade + ", and you're favorite color is " + color );
-
-    }
-   }
     
+        System.out.println("Please enter the password");
+        String password = input.nextLine();
+    {
+        if(password.equals("183726073"))
+       { System.out.println("Access Granted");
+         
+      }  else
+       {System.out.println("Access Denied");}
+    }
+    }
+}
+   
+
     
     
     
