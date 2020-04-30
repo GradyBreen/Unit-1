@@ -3,21 +3,23 @@ import java.util.Scanner;
 
 
 public class App {
-    public static void main(final String[] args) throws Exception{
+    public static void main(String[] args) throws Exception{
 
       Scanner input = new Scanner(System.in);
     
-        System.out.println("Please enter the password");
-        String password = input.nextLine();
-    {
-        if(password.equals("183726073"))
-       { System.out.println("Access Granted");
-         
-      }  else
-       {System.out.println("Access Denied");}
+        System.out.println("What is the count?");
+        int count = input.nextInt();
+
+
+        for (int x = 1; x <= count; x++){
+       System.out.println(x);}
+
+
+        
     }
+
     }
-}
+
    
 
     
