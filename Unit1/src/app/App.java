@@ -37,7 +37,7 @@ public class App {
        System.out.println("Enter amount you want to withdrawl");
        int withdrawl = input.nextInt();
        System.out.println("Your balance is $" + (account1.startingBalance - withdrawl));
-       account1.startingBalance = account1.startingBalance - withdrawl);
+       account1.startingBalance = account1.startingBalance - withdrawl;
        System.out.println("Would you like to check your balance by pressing 1, withdrawl by pressing 2, change passcode by pressing 3, or exit by pressing 4?");
        account1.operator = input.nextInt();
    }
