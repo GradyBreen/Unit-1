@@ -1,63 +1,58 @@
 package app;
+
 import java.util.Scanner;
-
-
-
-
 
 public class App {
     public static void main(String[] args) throws Exception{
+    Scanner input = new Scanner(System.in);
+    Account account1 = new Account();
+    
+    System.out.println("What is your name?");
+    account1.name = input.nextLine();
+    
+    System.out.println("What is your starting balance");
+    account1.startingBalance = input.nextInt();
 
-      dog dog1 = new dog();
-      dog dog2 = new dog();
-      dog dog3 = new dog();
-        Scanner input = new Scanner(System.in);
-      dog1.name = "John";
-      dog1.age = 5;
-      dog1.breed = "Lab";
-      dog1.weight = 64;
-      dog1.furColor = "Black fur";
-      dog1.height = 23;
-      dog2.name = "Ron";
-      dog2.age = 6;
-      dog2.breed = "Great Dane";
-      dog2.weight = 146;
-      dog2.furColor = "Brown fur";
-      dog2.height = 34;
-      dog3.name = "Gone";
-      dog3.age = 7;
-      dog3.breed = "PomPom";
-      dog3.weight = 6;
-      dog3.furColor = "Golden fur";
-      dog3.height = 23;
+    System.out.println("What passcode do you want?");
+    account1.password = input.nextInt();
 
-        System.out.println(dog1.name);
-        System.out.println(dog1.age +" years old");
-        System.out.println(dog1.breed);
-        System.out.println(dog1.weight +" lbs");
-        System.out.println(dog1.furColor);
-        System.out.println(dog1.height +" inches tall");
-        System.out.println(dog2.name);
-        System.out.println(dog2.age +" years old");
-        System.out.println(dog2.breed);
-        System.out.println(dog2.weight +" lbs");
-        System.out.println(dog2.furColor);
-        System.out.println(dog2.height + " inches tall");
-        System.out.println(dog3.name);
-        System.out.println(dog3.age +" years old");
-        System.out.println(dog3.breed);
-        System.out.println(dog3.weight +" lbs");
-        System.out.println(dog3.furColor);
-        System.out.println(dog3.height +" inches tall");
+    System.out.println("Account created, log in");
 
+    System.out.println("What is your name?");
+    input.nextLine();
+    String nameReal = input.nextLine();
+    if(nameReal.equals(account1.name)){
+        System.out.println("Enter your password");
+        int passcodeReal = input.nextInt();
+
+        if (passcodeReal == account1.password) {
+            System.out.println("Welcome, " + account1.name + "!");
+            System.out.println(
+                "What would you like to do? To check balance press 1, to make a withdrawl press 2, to change password press 3, or exit press 4");
+            account1.operator = input.nextInt();
+
+
+        }
+   if(account1.operator == 2) {
+       System.out.println("Enter amount you want to withdrawl");
+       int withdrawl = input.nextInt();
+       System.out.println("Your balance is $" + (account1.startingBalance - withdrawl));
+       account1.startingBalance = account1.startingBalance - withdrawl);
+       System.out.println("Would you like to check your balance by pressing 1, withdrawl by pressing 2, change passcode by pressing 3, or exit by pressing 4?");
+       account1.operator = input.nextInt();
+   }
+   if (account1.operator == 3) {
+       System.out.println("What password do you want?");
+       account1.password = input.nextInt();
+       System.out.println("Password changed! Please re enter your password");
+        passcodeReal = input.nextInt();
+       if (passcodeReal == account1.password){ System.out.println("Passcode changed");
+     }System.out.println("Would you like to check balance by pressing 1, withdrawl money by pressing 2, change password by pressing 3, or exitin by pressing 4?");  
+    }
+ else { System.out.println("Access denied");
+}
+    } if (account1.operator == 4){
+        System.out.println("Thank you! Have a nic day!");
     }
 }
-    
-
-   
-
-    
-    
-    
-        
-
+}
